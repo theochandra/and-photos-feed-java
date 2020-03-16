@@ -20,6 +20,19 @@ public class AndroidApplication extends Application {
         synchronized (AndroidApplication.class) {
             sContext = getApplicationContext();
         }
+
+        initRealm();
+    }
+
+    private void initRealm() {
+        Realm.init(this);
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
+            .encryptionKey(EncryptionKey.generateKey())
+            .schemaVersion(SchemaMigration.SCHEMA_VERSION)
+            .migration(new SchemaMigration())
+            .build();
+
+        Realm.setDefaultConfiguration(realmConfiguration);
     }
 
 }
