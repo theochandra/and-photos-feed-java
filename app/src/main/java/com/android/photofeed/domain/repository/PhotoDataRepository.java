@@ -31,5 +31,5 @@ public class PhotoDataRepository implements PhotoRepository {
             .observeOn(AndroidSchedulers.mainThread())
             .concatMap(isSuccess -> localPhotoDataSource.getPhotoList());
     }
-    
+
 }
