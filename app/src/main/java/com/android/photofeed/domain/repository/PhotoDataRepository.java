@@ -26,10 +26,10 @@ public class PhotoDataRepository implements PhotoRepository {
     public Observable<List<Photo>> getPhotoList() {
         return cloudPhotoDataSource.getPhotoList()
             .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .map(photoList -> localPhotoDataSource.writePhotoList(photoList))
-            .observeOn(AndroidSchedulers.mainThread())
-            .concatMap(isSuccess -> localPhotoDataSource.getPhotoList());
+            .observeOn(AndroidSchedulers.mainThread());
+//            .map(photoList -> localPhotoDataSource.writePhotoList(photoList))
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .concatMap(isSuccess -> localPhotoDataSource.getPhotoList());
     }
 
 }

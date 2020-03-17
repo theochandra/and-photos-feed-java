@@ -1,14 +1,14 @@
 package com.android.photofeed.domain.usecase;
 
-import com.android.photofeed.domain.repository.PhotoDataRepository;
+import com.android.photofeed.domain.repository.PhotoRepository;
 
 import io.reactivex.Observable;
 
 public class GetPhotoListUseCase extends UseCase {
 
-    private PhotoDataRepository mRepository;
+    private PhotoRepository mRepository;
 
-    public GetPhotoListUseCase(PhotoDataRepository repository) {
+    public GetPhotoListUseCase(PhotoRepository repository) {
         mRepository = repository;
     }
 

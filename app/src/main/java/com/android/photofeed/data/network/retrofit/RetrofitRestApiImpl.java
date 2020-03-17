@@ -102,7 +102,7 @@ public class RetrofitRestApiImpl implements RestApi {
 
     @Override
     public Observable<List<Photo>> getPhotoList(String fullUrl) {
-        return null;
+        return mApiService.getPhotoList(fullUrl);
     }
 
 }

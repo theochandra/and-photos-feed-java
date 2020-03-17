@@ -34,4 +34,9 @@
     <dimen name="font_size_m">16sp</dimen>
     <dimen name="font_size_s">12sp</dimen>
     <!-- font end -->
+
+    <dimen name="item_movie_card_width">170dp</dimen>
+    <dimen name="item_movie_card_height">290dp</dimen>
+    <dimen name="item_movie_card_radius">8dp</dimen>
+    <dimen name="item_movie_image_height">250dp</dimen>
 </resources>
