@@ -1,3 +1,7 @@
 <resources>
-<!--    <string name="app_name">PhotoFeed</string>-->
+
+    <string name="label_search_list_title">Photo Apps</string>
+
+    <string name="hint_search_query">Cari photo&#8230;</string>
+
 </resources>
