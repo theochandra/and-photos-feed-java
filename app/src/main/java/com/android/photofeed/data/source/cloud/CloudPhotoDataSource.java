@@ -2,6 +2,7 @@ package com.android.photofeed.data.source.cloud;
 
 import com.android.photofeed.data.RestApi;
 import com.android.photofeed.data.model.Photo;
+import com.android.photofeed.data.network.EndPointAddress;
 import com.android.photofeed.data.source.PhotoDataSource;
 
 import java.util.List;
@@ -17,7 +18,8 @@ public class CloudPhotoDataSource implements PhotoDataSource {
     }
 
     @Override
-    public Observable<List<Photo>> getPhotoList(String fullUrl) {
+    public Observable<List<Photo>> getPhotoList() {
+        String fullUrl = EndPointAddress.getPhotosEndPoint(EndPointAddress.PHOTOS);
         return restApi.getPhotoList(fullUrl);
     }
 

@@ -17,7 +17,7 @@ public class LocalPhotoDataSource implements PhotoDataSource {
     }
 
     @Override
-    public Observable<List<Photo>> getPhotoList(String fullUrl) {
+    public Observable<List<Photo>> getPhotoList() {
         return null;
     }
 

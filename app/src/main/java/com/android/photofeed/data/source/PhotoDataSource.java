@@ -8,7 +8,7 @@ import io.reactivex.Observable;
 
 public interface PhotoDataSource {
 
-    Observable<List<Photo>> getPhotoList(String fullUrl);
+    Observable<List<Photo>> getPhotoList();
 
     Observable<Boolean> writePhotoList(List<Photo> photoList);
 
